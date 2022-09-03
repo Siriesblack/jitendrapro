@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN dpkg --add-architecture i386
 RUN apt-get update
+RUN apt-get install gnupg -y
 RUN apt-get -y dist-upgrade
 RUN apt-get update &&  apt-get install -y  curl lsb-release
 
